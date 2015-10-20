@@ -63,7 +63,7 @@ client.on("error", function(err) {
 client.on("connect", function() {
 
 	console.log("CONNECT success");
-	client.auth(username, password);
+	client.login(username, password);
 
 });
 
@@ -75,7 +75,7 @@ client.on("locked", function(cmd) {
 	console.log("Current command has not finished yet. You tried calling " + cmd);
 });
 
-client.on("auth", function(status, data) {
+client.on("login", function(status, data) {
 
 	if (status) {
 
